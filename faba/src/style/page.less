@@ -1,0 +1,55 @@
+@import "variable.less";
+@myColor:grey;
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+  margin:0;
+  padding:0;
+}
+a {
+  text-decoration: none;
+}
+ul,ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#contain{
+  background: #F3F6F8;
+  overflow: scroll;
+}
+
+/*PC*/
+@media all and (min-width: 1200px) {
+  .vessel{
+    display: inherit !important;
+    padding-left:90px;
+    padding-top:70px;
+    width: 98%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
+/*ipad横屏*/
+@media (min-width: 780px) and (max-width: 1080px) {
+  .vessel{
+    display: inherit !important;
+    width: 89%;
+    padding-left:90px;
+    padding-top:70px;
+  }
+}
+
+/*ipad竖屏*/
+@media (min-width: 400px)and (max-width: 780px) {
+  .vessel{
+    display: inherit !important;
+    width: 85%;
+    padding-left:90px;
+    padding-top:70px;
+  }
+}
+
+#contain{
+  width:100%;
+  height: 100%;
+}
