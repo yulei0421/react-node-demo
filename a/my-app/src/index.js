@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './route/route';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter,Route,HashRouter} from 'react-router-dom'
 import Store from './stroes/index'
 import {Provider} from 'react-redux';
+import './App.css';
 
 
 

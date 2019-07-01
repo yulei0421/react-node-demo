@@ -28,7 +28,7 @@ class Home extends React.Component{
     Groupcity () {
         //请求城市数据
         axios.get('/groupdata/group/city').then(res=>{
-            // console.log(res)
+            console.log(res)
             this.setState({
                 groupcity : res.data[0] 
             })

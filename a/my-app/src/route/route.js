@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import {Route,Redirect,Switch,HashRouter} from 'react-router-dom';
-import './App.css';
-import Home from './home/home';
-import City from './city/city'
-import Store from './stroes/index'
-import {Provider} from 'react-redux';
+
+import Home from '../home/home';
+import City from '../city/city'
+import Nav from '../nav/nav'
+import reactCeshi from '../testreact/index'
+
 
 class App extends Component {
   render() {
@@ -13,6 +14,8 @@ class App extends Component {
         <Switch>
         <Route path='/home' component={Home}/>
         <Route path='/city' component={City}/>
+        <Route path='/nav' component={Nav}/>
+        <Route path='/reactCeshi' component={reactCeshi}/>
         </Switch>
       </div>
     );
