@@ -12,10 +12,10 @@ class App extends Component {
     return ( 
       <div className="App">
         <Switch>
-        <Route path='/home' component={Home}/>
-        <Route path='/city' component={City}/>
-        <Route path='/nav' component={Nav}/>
-        <Route path='/reactCeshi' component={reactCeshi}/>
+          <Route path='/home' component={Home}/>
+          <Route path='/city' component={City}/>
+          <Route path='/nav' component={Nav}/>
+          <Route path='/reactCeshi' component={reactCeshi}/>
         </Switch>
       </div>
     );
