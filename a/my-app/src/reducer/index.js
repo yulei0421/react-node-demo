@@ -1,4 +1,4 @@
-import {saveGeohashAction} from '../action'
+// import {saveGeohashAction} from '../action'
 
 export default(state={},action)=>{
     // console.log(action)

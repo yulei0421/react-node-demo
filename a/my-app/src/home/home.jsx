@@ -1,6 +1,6 @@
 import './home.scss';
 import React from "react";
-import { Link, Router, Route, hashHistory } from 'react-router-dom';
+import { Link,} from 'react-router-dom';
 // import Header from 'components/header/index.js';
 // import {Currentcity} from '../getdate/getDate'
 import { map } from 'underscore';
