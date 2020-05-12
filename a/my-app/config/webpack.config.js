@@ -28,6 +28,8 @@ const smp = new SpeedMeasurePlugin();
 const HappyPack = require("happypack");
 const os = require("os");
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
+let BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== "false";
@@ -241,8 +243,18 @@ module.exports = function(webpackEnv) {
       // https://twitter.com/wSokra/status/969633336732905474
       // https://medium.com/webpack/webpack-4-code-splitting-chunk-graph-and-the-splitchunks-optimization-be739a861366
       splitChunks: {
-        chunks: "all",
-        name: false,
+        cacheGroups: {
+          vendors: {
+            test: /[\\/]node_modules[\\/](react|react-dom|react-router-dom|axios)/,
+            name: "vendors",
+            chunks: "all",
+          },
+          default:{
+            test: /[\\/]node_modules[\\/](antd)/,
+            name: "default",
+            chunks: "all",
+          }, 
+        },
       },
       // Keep the runtime chunk seperated to enable long term caching
       // https://twitter.com/wSokra/status/969679223278505985
@@ -406,6 +418,17 @@ module.exports = function(webpackEnv) {
                 babelrc: false,
                 configFile: false,
                 compact: false,
+                plugins: [
+                  "@babel/plugin-syntax-dynamic-import",
+                  [
+                    "import",
+                    {
+                      //按需引入antd
+                      libraryName: "antd",
+                      style: "css", // `style: true` 会加载 less 文件
+                    },
+                  ],
+                ],
                 presets: [
                   [
                     require.resolve("babel-preset-react-app/dependencies"),
@@ -510,6 +533,7 @@ module.exports = function(webpackEnv) {
     },
     plugins: [
       // Generates an `index.html` file with the <script> injected.
+      // new BundleAnalyzerPlugin(),
       new HappyPack({
         //用id来标识 happypack处理那里类文件
         id: "happyBabel",

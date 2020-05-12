@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from '../server'
 
 interface GenericIdentityFn<T> {
   (clickNum: T): T;
@@ -19,6 +20,9 @@ const testHook = (props: any) => {
 
 
   useEffect(() => {
+    axios.get('/Insurance/appointEmp/get/qrCode').then((res:any)=>{
+
+      })
     console.log(`%c${num}${Direction.Up}`, 'color: red; font-size: 32px')
   }, [num])
 

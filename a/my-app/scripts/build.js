@@ -85,7 +85,7 @@ checkBrowsers(paths.appPath, isInteractive)
             ' to the line before.\n'
         );
       } else {
-        console.log(chalk.green('Compiled successfully.\n'));
+        console.log(chalk.green('打包编译成功.\n'));
       }
 
       console.log('File sizes after gzip:\n');
