@@ -4,9 +4,9 @@ import axios from '../server'
 interface GenericIdentityFn<T> {
   (clickNum: T): T;
 }
-interface Params{
-  title:number,
-  sex:string
+interface Params {
+  title: number,
+  sex: string
 }
 enum Direction {
   Up,
@@ -20,9 +20,9 @@ const testHook = (props: any) => {
 
 
   useEffect(() => {
-    axios.get('/Insurance/appointEmp/get/qrCode').then((res:any)=>{
-
-      })
+    axios.get('/Insurance/appointEmp/get/qrCode',{}).then((res: any) => {
+       
+    })
     console.log(`%c${num}${Direction.Up}`, 'color: red; font-size: 32px')
   }, [num])
 
@@ -32,21 +32,21 @@ const testHook = (props: any) => {
     setNum(sumNum)
     sTitle(1);
     let parmas = {
-      title:1,
-      sex:'男',
+      title: 1,
+      sex: '男',
     }
     fuc(parmas)
   }
-  const sTitle:GenericIdentityFn<Direction.Up> = (clickNum) =>  clickNum
-  const fuc = (obj:Params) => {
-       obj.title
+  const sTitle: GenericIdentityFn<Direction.Up> = (clickNum) => clickNum
+  const fuc = (obj: Params) => {
+    obj.title
   }
 
   return (
     <div>
       <div onClick={click}>点击事件</div>
       <div>{title}</div>
-      <input type="text"/>
+      <input type="text" />
     </div>
   )
 }

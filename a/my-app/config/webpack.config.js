@@ -319,35 +319,6 @@ module.exports = function(webpackEnv) {
       rules: [
         // Disable require.ensure as it's not a standard language feature.
         { parser: { requireEnsure: false } },
-        // load ts/tsx with awesome-typescript-loader
-        // {
-        //   test: /\.tsx?$/,
-        //   exclude: /node_modules/,
-        //   loader: "ts-loader",
-        //   // options: {
-        //   //   presets: [
-        //   //     '@babel/preset-env',
-        //   //     '@babel/preset-react',
-        //   //     '@babel/preset-typescript'
-        //   //   ]
-        //   // }
-        // },
-        // First, run the linter.
-        // It's important to do this before Babel processes the JS.
-        // {
-        //   test: /\.(js|mjs|jsx|ts|tsx)$/,
-        //   enforce: "pre",
-        //   use: [
-        //     {
-        //       options: {
-        //         formatter: require.resolve("react-dev-utils/eslintFormatter"),
-        //         eslintPath: require.resolve("eslint"),
-        //       },
-        //       loader: require.resolve("eslint-loader"),
-        //     },
-        //   ],
-        //   include: paths.appSrc,
-        // },
         {
           // "oneOf" will traverse all following loaders until one will
           // match the requirements. When no loader matches it will fall
