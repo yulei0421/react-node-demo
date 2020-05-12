@@ -8,8 +8,8 @@ import axios from '../server'
 import {saveGeohashAction} from '../action'
 import {connect} from 'react-redux';
 class Home extends React.Component{
-    constructor () {
-        super()
+    constructor (props) {
+        super(props)
         this.state = {
             city:"北京",
             hotcity:[],

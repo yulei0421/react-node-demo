@@ -1,6 +1,6 @@
 import './city.scss';
 import React from 'react';
-import { Link, Router, Route, hashHistory } from 'react-router-dom';
+import { Link, Router, Route } from 'react-router-dom';
 import {saveGeohashAction} from '../action'
 import {connect} from 'react-redux';
 

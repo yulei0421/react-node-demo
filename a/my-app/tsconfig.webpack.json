@@ -1,0 +1,37 @@
+{
+	"__comment": {
+		"##outDir": "remove from tsconfig.json, due to conflict with webpack HMR",
+		"##rootDir": "removed due to the same conflict",
+		"##module": "webpack 2 already supports ES6 import, just use it"
+	},
+	"compilerOptions": {
+		"allowJs": true,
+		"target": "esnext",
+		"noImplicitAny": true,
+		"experimentalDecorators": true,
+		"sourceMap": false,
+		"moduleResolution": "node",
+		"listEmittedFiles": false,
+		"emitDecoratorMetadata": false,
+		"jsx": "preserve",
+		"pretty": false,
+		"importHelpers": true,
+		"allowSyntheticDefaultImports": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"module": "esnext",
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"baseUrl": "src/",
+		"paths": {
+			"@/*": ["./*"]
+		},
+		"noImplicitThis": true
+	},
+
+	"exclude": ["node_modules"],
+	"include": ["src"],
+
+	"compileOnSave": false
+}

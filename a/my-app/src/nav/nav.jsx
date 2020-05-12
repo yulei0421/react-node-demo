@@ -5,8 +5,8 @@ import { Menu, Icon, Switch } from 'antd';
 const { SubMenu } = Menu;
 
 class Sider extends React.Component {
-  constructor () {
-    super() 
+  constructor (props) {
+    super(props) 
     this.state = {
       data : ['首页', '复选']
     }

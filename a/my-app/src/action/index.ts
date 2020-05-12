@@ -7,11 +7,6 @@ export const SAVE_LATLNT_ACTION = 'SAVE_LATLNT_ACTION';
 //       data:[1,2,3,4] 
 //     }
 //   }
-export const saveGeohashAction=(geohash)=>({
-    type:SAVE_GEOHASH_ACTION,
-    saveGeohashAction:
-    {
-      geohash
-   }
-  }
+export const saveGeohashAction=()=>({
+}
 )

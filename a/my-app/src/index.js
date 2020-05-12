@@ -5,17 +5,17 @@ import App from './route/route';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter,Route,HashRouter} from 'react-router-dom'
 import Store from './stroes/index'
-import {Provider} from 'react-redux';
+// import {Provider} from 'react-redux';
 import './App.css';
 
 
 
 ReactDOM.render(
-    <Provider store={Store}>
+    // <Provider store={Store}>
     <BrowserRouter>
     <App />
     </BrowserRouter>
-    </Provider>
+    // </Provider>
 ,
 document.getElementById('root'));
 // ReactDOM.render(<App />, document.getElementById('root'));
