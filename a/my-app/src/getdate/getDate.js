@@ -1,4 +1,4 @@
-import axios from '../server'
+import axios from '../middleware/server'
 
 let Currentcity = () => {
   axios.get('/20/red').then(res=>{

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from '../http/index'
+import config from '../api/index'
 
 interface GenericIdentityFn<T> {
   (clickNum: T): T;
@@ -20,8 +21,7 @@ const testHook = (props: any) => {
 
 
   useEffect(() => {
-    axios.get('/Insurance/appointEmp/get/qrCode',{}).then((res: any) => {
-       
+    axios.get(config.INSURANCE_APPOINTEMP_GET_QRCODE,{}).then((res: any) => {
     })
     console.log(`%c${num}${Direction.Up}`, 'color: red; font-size: 32px')
   }, [num])

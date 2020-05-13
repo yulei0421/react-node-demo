@@ -4,7 +4,7 @@ import { Link,} from 'react-router-dom';
 // import Header from 'components/header/index.js';
 // import {Currentcity} from '../getdate/getDate'
 import { map } from 'underscore';
-import axios from '../server'
+import axios from '../middleware/server'
 import {saveGeohashAction} from '../action'
 import {connect} from 'react-redux';
 class Home extends React.Component{

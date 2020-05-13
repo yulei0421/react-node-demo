@@ -1,6 +1,6 @@
 /****   http.js   ****/
 // 导入封装好的axios实例
-import request from '../server'
+import request from '../middleware/server'
 
 const http = {
     /**
