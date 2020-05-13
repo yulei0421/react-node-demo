@@ -108,7 +108,7 @@ checkBrowsers(paths.appPath, isInteractive)
         clearConsole();
       }
       // console.log(chalk.cyan("Starting the development server...\n"));
-      console.log(chalk.cyan("长投学堂打包工具打包中......"));
+      console.log(chalk.cyan("😝😝😝😝😝😝😝😝😝打包中......"));
       openBrowser(urls.localUrlForBrowser);
     });
 
