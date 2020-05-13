@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from '../server'
+import axios from '../http/index'
 
 interface GenericIdentityFn<T> {
   (clickNum: T): T;
