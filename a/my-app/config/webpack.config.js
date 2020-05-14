@@ -318,6 +318,19 @@ module.exports = function(webpackEnv) {
       strictExportPresence: true,
       rules: [
         // Disable require.ensure as it's not a standard language feature.
+        // {
+        //   test: /\.tsx?$/,
+        //   enforce: 'pre',
+        //   exclude: /node_modules|\.stories\.tsx?$/,
+        //   use: [
+        //     {
+        //       loader: 'eslint-loader',
+        //       options: {
+        //         // eslintPath: require.resolve('eslint')
+        //       }
+        //     }
+        //   ]
+        // },
         { parser: { requireEnsure: false } },
         {
           // "oneOf" will traverse all following loaders until one will

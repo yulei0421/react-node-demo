@@ -66,3 +66,14 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### `后续优化点`
+
+less全面替换saas  saas兼容性版本要求很高
+
+代码提交统一风格
+
+后续公共代码工具抽离到node_module内部
+
+接口数据统一放入redux中管理

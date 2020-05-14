@@ -6,7 +6,4 @@ export function saveGeohashAction(geohash:any) {
       type: 'SAVE_GEOHASH_ACTION',
       data:[1,2,3,4] 
     }
-  }
-// export const saveGeohashAction=()=>({
-// }
-// )
+  };
