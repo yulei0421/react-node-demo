@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from '../http/index'
-import config from '../api/index'
+import axios from '../../http/index'
+import config from '../../api/index'
 
 interface GenericIdentityFn<T> {
   (clickNum: T): T;
@@ -40,8 +40,67 @@ const testHook = (props: any) => {
 
   const infoMap = newInfo
 
-  console.log(infoMap, '====>')
-   
+  // type Cb = () => void
+  // function sum(params: {}, cb: Function) {
+
+  // }
+  // enum Status {
+  //   Draft = 'Draft1',
+  //   Published = 'Published'
+  // }
+
+  // function itself<T>(a: T): T {
+  //   return a
+  // }
+
+  // // console.log(itself<boolean>(true)) // true
+  // // console.log(itself<number>(1))   // 1
+  // // console.log(itself<string>('1')) // '1'
+  // // console.log(itself<Array<number>>([1, 2, 3])) // [1, 2, 3
+
+  // function typeT <T>(a:T):T{
+  //    return a
+  // }
+  // typeT(1)
+
+  // const str = 'Draft';
+  // const status: Status = Status[str];
+  // console.log(status, '===>{}')
+  // // sum()
+  // console.log(infoMap, '====>')
+  interface People {
+    age: number,
+    name: string
+  }
+
+  function interFace<T extends JJ>(params: T): T {
+    return params
+  }
+  interface JJ {
+    jjSize: string
+    jjLength: number
+}
+  interFace({
+    age: 18,
+    name: 'yulei',
+    jjSize:'1',
+    jjLength: 20
+  })
+  interface iPeople {
+    name: string;
+    age: number
+  }
+  
+  interface iPeople {
+    name: string;
+    age: number
+  }
+  
+  type T = keyof iPeople
+
+  let a : T = 'name'
+  console.log(a)
+
   useEffect(() => {
     axios.get(config.INSURANCE_APPOINTEMP_GET_QRCODE, {}).then((res: any) => {
     })
@@ -70,11 +129,11 @@ const testHook = (props: any) => {
       <div>{title}</div>
       <input type="text" />
       {
-      // infoMap.map(v=>(
-      //   <div>
-      //     {v.key}
-      //   </div>
-      // ))
+        // infoMap.map(v=>(
+        //   <div>
+        //     {v.key}
+        //   </div>
+        // ))
       }
     </div>
   )

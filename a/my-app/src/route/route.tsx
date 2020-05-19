@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-
-import Home from '../home/home';
-import City from '../city/city'
-import Nav from '../nav/nav'
-import reactCeshi from '../testreact/index'
-import Hoc from '../hoc/index'
+import Hoc from '../pages/hoc/index'
+import Class from '../pages/studentClass/index'
 
 
 class App extends Component {
@@ -13,11 +9,8 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route path='/home' component={Home} />
-          <Route path='/city' component={City} />
-          <Route path='/nav' component={Nav} />
           <Route path='/hoc' component={Hoc} />
-          <Route path='/reactCeshi' component={reactCeshi} />
+          <Route path='/Class' component={Class} />
         </Switch>
       </div>
     );
