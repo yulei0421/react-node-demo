@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2019-02-25 15:17:19
+ * @LastEditTime: 2020-05-25 16:20:58
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /my-app/README.md
+--> 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -77,3 +85,15 @@ less全面替换saas  saas兼容性版本要求很高
 后续公共代码工具抽离到node_module内部
 
 接口数据统一放入redux中管理
+
+### 组件懒加载
+`React.lazy + Suspense`
+`
+ const Foo = React.lazy(() => {
+    return import("./child");
+  });
+
+<Suspense fallback={<div>loading...</div>}>
+        <Foo />
+</Suspense>
+  `
