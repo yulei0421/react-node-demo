@@ -1,12 +1,12 @@
 /*
  * @Author: 余磊
  * @Date: 2020-05-25 15:58:19
- * @LastEditTime: 2020-05-25 16:00:32
+ * @LastEditTime: 2020-05-25 16:29:23
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /my-app/src/util/urlParmas/index.js
  */ 
-function getParams () {
+export function getParams () {
 	let obj:any = {
 
 	}
@@ -21,4 +21,4 @@ function getParams () {
 	return obj
 }
 
-export default getParams
+
