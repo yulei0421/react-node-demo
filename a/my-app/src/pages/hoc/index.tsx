@@ -1,6 +1,8 @@
 import React, { useState, useEffect, Suspense } from "react";
 import axios from "../../http/index";
 import config from "../../api/index";
+import Foo from "./child";
+import "./index.scss";
 
 interface GenericIdentityFn<T> {
   (clickNum: T): T;
@@ -18,10 +20,14 @@ enum Direction {
 
 const testHook = (props: any) => {
   const [num, setNum] = useState<number>(0);
-  const [title, setTitle] = useState<string>("");
-  const Foo = React.lazy(() => {
-    return import("./child");
-  });
+  const [title, setTitle] = useState<string>("d");
+  const [styleObj,setStyleObj] = useState<object>({
+    fontSize:'18px',
+  })
+  const [fontS,setFont] = useState<number>(18)
+  // const Foo = React.lazy(() => {
+  //   return import("./child");
+  // });
 
   const info = {
     name: "wangly",
@@ -80,7 +86,7 @@ const testHook = (props: any) => {
   useEffect(() => {
     axios
       .get(config.INSURANCE_APPOINTEMP_GET_QRCODE, {})
-      .then((res: any) => { });
+      .then((res: any) => {});
     console.log(`%c${num}${Direction.Up}`, "color: red; font-size: 32px");
   }, [num]);
 
@@ -100,12 +106,36 @@ const testHook = (props: any) => {
     // obj.title
   };
 
+  useEffect(() => {
+    var fs = document.querySelectorAll('.fs')[0]
+    var box = document.querySelectorAll('.box')[0]
+    const fWidth = fs.clientWidth;
+    const bWidth = box.clientWidth;
+    let font = fontS
+    if(fWidth>bWidth){
+      font -= 2
+      setFont(font)
+      setStyleObj({
+        fontSize:`${font}px`
+      })
+    }
+    console.log(fs,fWidth,bWidth)
+  }, [title]);
+
+  const iValue = (e) => {
+    console.log(e.target.value);
+    setTitle(e.target.value);
+  };
+
   return (
     <div>
       <div onClick={click}>点击事件</div>
       <div>{title}</div>
-      <input type="text" />
-        <Foo />
+      <input type="text" onChange={iValue} />
+      <Foo />
+      <div className="box">
+        <div className="fs" style={styleObj}>{title}</div>
+      </div>
     </div>
   );
 };
