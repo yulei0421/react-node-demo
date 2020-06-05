@@ -1,11 +1,12 @@
 <!--
  * @Author: your name
  * @Date: 2019-02-25 15:17:19
- * @LastEditTime: 2020-05-25 16:20:58
+ * @LastEditTime: 2020-06-05 16:13:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /my-app/README.md
---> 
+-->
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -75,25 +76,27 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-
 ### `后续优化点`
 
-less全面替换saas  saas兼容性版本要求很高
+less 全面替换 saas saas 兼容性版本要求很高
 
 代码提交统一风格
 
-后续公共代码工具抽离到node_module内部
+后续公共代码工具抽离到 node_module 内部
 
-接口数据统一放入redux中管理
+接口数据统一放入 redux 中管理
 
 ### 组件懒加载
+
 `React.lazy + Suspense`
 `
- const Foo = React.lazy(() => {
-    return import("./child");
-  });
+const Foo = React.lazy(() => {
+return import("./child");
+});
 
 <Suspense fallback={<div>loading...</div>}>
-        <Foo />
+<Foo />
 </Suspense>
-  `
+`
+
+## 新增 preyyoerrc 代码统一风格
