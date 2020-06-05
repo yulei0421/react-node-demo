@@ -1,0 +1,18 @@
+{
+    "editor.tabSize": 4,
+    "editor.formatOnSave": false,
+
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 60000000,
+
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 120,
+    "editor.wrappingIndent": "indent",
+
+    "html.format.wrapAttributes": "force",
+
+    "javascript.preferences.quoteStyle": "single",
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+    "typescript.tsdk": "node_modules\\typescript\\lib"
+}

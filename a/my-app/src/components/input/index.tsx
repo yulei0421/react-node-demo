@@ -14,23 +14,24 @@
  * }
 */
 import React from 'react';
-import { Checkbox, Row, } from 'antd';
+import { Checkbox, Row } from 'antd';
 // import styles from './index.less';
 
-type Prpps = any
+type Prpps = any;
 interface CheckBoxProps extends Prpps {
-  option: any[];
-  value: string[] | number[];
-  useType: string;
+    option: any[];
+    value: string[] | number[];
+    useType: string;
 }
 
-const SettingInput: any = (props: { useType: string; onSettingChange: (arg0: any, arg1: any) => void; skey: any; option: { value: { [x: string]: any; }; }[]; value: string | any[]; }) => {
-
-  return (
-    <div>
-      111
-    </div>
-  );
-}
+const SettingInput: any = (props: {
+    useType: string;
+    onSettingChange: (arg0: any, arg1: any) => void;
+    skey: any;
+    option: { value: { [x: string]: any } }[];
+    value: string | any[];
+}) => {
+    return <div>111</div>;
+};
 
 export default SettingInput;
