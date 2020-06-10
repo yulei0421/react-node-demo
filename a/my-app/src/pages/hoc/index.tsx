@@ -3,6 +3,7 @@ import axios from '../../http/index';
 import config from '../../api/index';
 import Foo from './child';
 import './index.scss';
+import source from './node'
 
 interface GenericIdentityFn<T> {
     (clickNum: T): T;
@@ -123,7 +124,8 @@ const testHook = (props: any) => {
     const iValue = (e) => {
         console.log(e.target.value);
         setTitle(e.target.value);
-    };
+	};
+	console.log(source)
 
     return (
         <div>
