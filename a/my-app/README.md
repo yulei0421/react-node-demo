@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-02-25 15:17:19
- * @LastEditTime: 2020-06-10 17:43:11
+ * @LastEditTime: 2020-06-10 17:52:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /my-app/README.md
@@ -102,3 +102,4 @@ return import("./child");
 ## 新增 preyyoerrc 代码统一风格
 
 ## 新增 图片压缩功能
+

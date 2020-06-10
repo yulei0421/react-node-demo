@@ -1,7 +1,15 @@
+/*
+ * @Author: 余磊
+ * @Date: 2019-02-25 15:17:19
+ * @LastEditTime: 2020-06-10 17:54:51
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /my-app/src/middleware/server.ts
+ */ 
 /****   request.js   ****/
 // 导入axios
 import axios from 'axios'
-// 使用element-ui Message做消息提醒
+// 使用antd-ui Message做消息提醒
 import { message, } from 'antd';
 //1. 创建新的axios实例，
 const service = axios.create({
