@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 // import Class from '../pages/studentClass/index'
 const Hoc = React.lazy(() => import('../pages/hoc/index'));
 const Class = React.lazy(() => import('../pages/studentClass/index'));
+const antdTv = React.lazy(() => import('../pages/antdTv/index'));
 
 class App extends Component {
     render() {
@@ -15,6 +16,7 @@ class App extends Component {
 
                         <Route path="/hoc" component={Hoc} />
                         <Route path="/Class" component={Class} />
+                        <Route path="/antdTv" component={antdTv} />
                     </Switch>
                 </Suspense>
             </div>

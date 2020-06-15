@@ -3,6 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "@antv/f2": "^3.6.4-beta.7",
+        "@antv/l7": "^2.2.11",
+        "@antv/l7-maps": "^2.2.11",
         "@babel/cli": "7.7.0",
         "@babel/core": "7.7.2",
         "@babel/plugin-proposal-class-properties": "7.7.0",
