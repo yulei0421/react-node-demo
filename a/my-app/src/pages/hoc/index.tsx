@@ -4,6 +4,7 @@ import config from '../../api/index';
 import Foo from './child';
 import './index.scss';
 import source from './node'
+import {encrypt,decrypt}from '../../util/encryption/index'
 
 interface GenericIdentityFn<T> {
     (clickNum: T): T;
@@ -18,6 +19,8 @@ enum Direction {
     Left,
     Right
 }
+console.log(encrypt('1123123'),'加密')
+console.log(decrypt('OyBVk1NeiPiPrF3IK4YBZw=='),'解密')
 
 const testHook = (props: any) => {
     const [num, setNum] = useState<number>(0);
@@ -133,6 +136,7 @@ const testHook = (props: any) => {
             <div>{title}</div>
             <input type="text" onChange={iValue} />
             <Foo />
+            <div className='enlarge'>121312312</div>
             <div className="box">
                 <div className="fs" style={styleObj}>
                     {title}

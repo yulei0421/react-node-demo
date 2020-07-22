@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-02-25 15:17:19
- * @LastEditTime: 2020-06-10 17:52:20
+ * @LastEditTime: 2020-07-22 11:25:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /my-app/README.md
@@ -103,3 +103,9 @@ return import("./child");
 
 ## 新增 图片压缩功能
 
+## 新增 对称加解密 
+`
+import {encrypt,decrypt}from '../../util/encryption/index'
+console.log(encrypt('1123123'),'加密')
+console.log(decrypt('OyBVk1NeiPiPrF3IK4YBZw=='),'解密')
+`
