@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-02-25 15:17:19
- * @LastEditTime: 2020-07-22 11:25:05
+ * @LastEditTime: 2020-07-22 14:22:13
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /my-app/README.md
@@ -109,3 +109,4 @@ import {encrypt,decrypt}from '../../util/encryption/index'
 console.log(encrypt('1123123'),'加密')
 console.log(decrypt('OyBVk1NeiPiPrF3IK4YBZw=='),'解密')
 `
+### 新增打包压缩UglifyJSPliginL

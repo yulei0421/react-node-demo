@@ -38,6 +38,8 @@ const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false';
 
 // Check if TypeScript is setup
 const useTypeScript = fs.existsSync(paths.appTsConfig);
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+
 
 // style files regexes
 const cssRegex = /\.css$/;
@@ -506,6 +508,7 @@ module.exports = function(webpackEnv) {
         plugins: [
             // Generates an `index.html` file with the <script> injected.
             // new BundleAnalyzerPlugin(),
+            new UglifyJSPlugin(),
             new HappyPack({
                 //用id来标识 happypack处理那里类文件
                 id: 'happyBabel',
