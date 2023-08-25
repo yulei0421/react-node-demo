@@ -329,25 +329,25 @@ module.exports = function(webpackEnv) {
                         {
                             test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
                             use: [
-                                {
-                                    loader: require.resolve('url-loader'),
-                                    options: {
-                                        limit: 10000,
-                                        name: 'static/media/[name].[hash:8].[ext]'
-                                    }
-                                },
-                                {
-                                    loader: 'img-loader', //配置图片资源加载器，用于图片压缩
-                                    options: {
-                                        plugins: [
-                                            //给图片资源加载配置插件
-                                            // require('imagemin-pngquant')({
-                                                //用于图片压缩的imagemin-pngquant，还有一个隐式调用的加载器imagemin-loader
-                                                // quality: [0.3, 0.5] //图片压缩30%~50%
-                                            // })
-                                        ]
-                                    }
-                                }
+                                // {
+                                //     loader: require.resolve('url-loader'),
+                                //     options: {
+                                //         limit: 10000,
+                                //         name: 'static/media/[name].[hash:8].[ext]'
+                                //     }
+                                // },
+                                // {
+                                //     loader: 'img-loader', //配置图片资源加载器，用于图片压缩
+                                //     options: {
+                                //         plugins: [
+                                //             //给图片资源加载配置插件
+                                //             // require('imagemin-pngquant')({
+                                //                 //用于图片压缩的imagemin-pngquant，还有一个隐式调用的加载器imagemin-loader
+                                //                 // quality: [0.3, 0.5] //图片压缩30%~50%
+                                //             // })
+                                //         ]
+                                //     }
+                                // }
                             ]
                         },
                         // Process application JS with Babel.
@@ -471,18 +471,18 @@ module.exports = function(webpackEnv) {
                         },
                         // Adds support for CSS Modules, but using SASS
                         // using the extension .module.scss or .module.sass
-                        {
-                            test: sassModuleRegex,
-                            use: getStyleLoaders(
-                                {
-                                    importLoaders: 2,
-                                    sourceMap: isEnvProduction && shouldUseSourceMap,
-                                    modules: true,
-                                    getLocalIdent: getCSSModuleLocalIdent
-                                },
-                                'sass-loader'
-                            )
-                        },
+                        // {
+                        //     test: sassModuleRegex,
+                        //     use: getStyleLoaders(
+                        //         {
+                        //             importLoaders: 2,
+                        //             sourceMap: isEnvProduction && shouldUseSourceMap,
+                        //             modules: true,
+                        //             getLocalIdent: getCSSModuleLocalIdent
+                        //         },
+                        //         'sass-loader'
+                        //     )
+                        // },
                         // "file" loader makes sure those assets get served by WebpackDevServer.
                         // When you `import` an asset, you get its (virtual) filename.
                         // In production, they would get copied to the `build` folder.
@@ -495,6 +495,7 @@ module.exports = function(webpackEnv) {
                             // Also exclude `html` and `json` extensions so they get processed
                             // by webpacks internal loaders.
                             exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
+                            // test: /\.(png|jpe?g|gif)$/i,
                             options: {
                                 name: 'static/media/[name].[hash:8].[ext]'
                             }
@@ -508,21 +509,21 @@ module.exports = function(webpackEnv) {
         plugins: [
             // Generates an `index.html` file with the <script> injected.
             // new BundleAnalyzerPlugin(),
-            new UglifyJSPlugin(),
-            new HappyPack({
-                //用id来标识 happypack处理那里类文件
-                id: 'happyBabel',
-                //如何处理  用法和loader 的配置一样
-                loaders: [
-                    {
-                        loader: 'babel-loader?cacheDirectory=true'
-                    }
-                ],
-                //共享进程池
-                threadPool: happyThreadPool,
-                //允许 HappyPack 输出日志
-                verbose: true
-            }),
+            // new UglifyJSPlugin(),
+            // new HappyPack({
+            //     //用id来标识 happypack处理那里类文件
+            //     id: 'happyBabel',
+            //     //如何处理  用法和loader 的配置一样
+            //     loaders: [
+            //         {
+            //             loader: 'babel-loader?cacheDirectory=true'
+            //         }
+            //     ],
+            //     //共享进程池
+            //     threadPool: happyThreadPool,
+            //     //允许 HappyPack 输出日志
+            //     verbose: true
+            // }),
             new HtmlWebpackPlugin(
                 Object.assign(
                     {},
